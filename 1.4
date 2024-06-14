@@ -1,0 +1,25 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataset (replace 'monthly_weather_data.csv' with the actual filename)
+data = pd.read_csv('monthly_weather_data.csv')
+
+# Plot line plot for temperature
+plt.figure(figsize=(10, 6))
+plt.plot(data['Month'], data['Temperature'], marker='o')
+plt.title('Monthly Temperature Variation')
+plt.xlabel('Month')
+plt.ylabel('Temperature (°C)')
+plt.xticks(rotation=45)
+plt.grid(True)
+plt.show()
+
+# Plot scatter plot for rainfall
+plt.figure(figsize=(10, 6))
+plt.scatter(data['Month'], data['Rainfall'], color='r')
+plt.title('Monthly Rainfall Distribution')
+plt.xlabel('Month')
+plt.ylabel('Rainfall (mm)')
+plt.xticks(rotation=45)
+plt.grid(True)
+plt.show()
